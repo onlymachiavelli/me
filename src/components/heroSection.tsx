@@ -3,10 +3,13 @@
 import * as React from "react"
 import bck from "./../../public/assets/bck.jpg"
 import Link from "next/link"
-//GiTriangleTarget import that from react-icon
 import { GiTriangleTarget } from "react-icons/gi"
 import { PiHamburgerLight } from "react-icons/pi"
+import Astro from "./../../public/lottie/animation_lmsgpifg.json"
+import Lottie from "lottie-react"
 const Hero = ({ ...props }) => {
+  //create an animation ref
+  const animationRef = React.useRef(null)
   return (
     <main className="w-full h-auto">
       <div
@@ -39,6 +42,24 @@ const Hero = ({ ...props }) => {
               />
             </button>
           </header>
+
+          <div className="w-full h-auto">
+            <aside></aside>
+            <aside className="h-auto">
+              <h1 className="text-center text-xl">
+                Hi there this is <b className="bg-[#000]">Alaa Barka</b>,
+                Software Developer, Coffee Addict, and an enterpreneur
+              </h1>
+              <Lottie
+                animationData={Astro}
+                loop
+                autoplay
+                ref={animationRef}
+                //width is 75%
+                style={{ width: "75%", margin: "auto" }}
+              />
+            </aside>
+          </div>
         </div>
       </div>
     </main>
