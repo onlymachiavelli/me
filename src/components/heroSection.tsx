@@ -15,7 +15,7 @@ const Hero = ({ ...props }) => {
   const animationRef = React.useRef(null)
   return (
     <main className="w-full h-auto">
-      <Parallax>
+      <Parallax pages={2}>
         <div
           className="w-full h-[200vh] bg-no-repeat bg-cover bg-center"
           style={{
@@ -120,6 +120,9 @@ const Hero = ({ ...props }) => {
                   />
                 </aside>
               </ParallaxLayer>
+            </div>
+            <div className="w-full h-screen flex items-center justify-center mt-[17rem]">
+              <GiTriangleTarget color="#fff" size={40} />
             </div>
           </div>
         </div>
