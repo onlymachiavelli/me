@@ -10,8 +10,34 @@ import { RiTwitterXFill } from "react-icons/ri"
 import Astro from "./../../public/lottie/animation_lmtd0834.json"
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
+import { useDebounce } from "@uidotdev/usehooks"
+import LottieAnimation from "./astro"
+
 import Lottie from "lottie-react"
+
 const Hero = ({ ...props }) => {
+  const [bannerTxt, setBan] = React.useState("")
+
+  const debounceBanner = useDebounce(bannerTxt, 0.1)
+  const [index, setIndex] = React.useState(0)
+
+  React.useEffect(() => {
+    const msg: any =
+      "Software Developer and Computer Scientist, Scroll down and learn \nsome about me. |"
+
+    if (index < msg.length) {
+      setTimeout(() => {
+        setBan((prev) => prev + msg[index])
+        setIndex((prev) => prev + 1)
+      }, 0.1)
+    } else {
+      //remove the laast character
+      setTimeout(() => {
+        setBan((prev) => prev.slice(0, -1))
+        setIndex((prev) => prev - 1)
+      }, 0.1)
+    }
+  }, [debounceBanner])
   const animationRef = React.useRef(null)
   return (
     <main className="w-full h-auto">
@@ -36,17 +62,14 @@ const Hero = ({ ...props }) => {
             </button>
           </header>
 
-          <div className="w-full h-auto flex items-center justify-center flex-col  ">
+          <div className="w-full h-auto lg:screen flex items-center justify-center flex-col  ">
             <aside className="w-11/12 lg:w-1/2 p-10 ">
               <p className="text-xl font-thin text-white ">Hi There, This is</p>
               <h1 className="font-extrabold py-5 text-transparent text-8xl bg-clip-text bg-gradient-to-r from-[#009FFF] to-[#ec2F4B] flex items-center ">
                 <GiTriangleTarget color="#009FFF" size={95} />
                 laa
               </h1>
-              <p className="text-white text-xl">
-                Software Developer and Computer Scientist, Scroll down and learn
-                some about me.
-              </p>
+              <p className="text-white text-xl">{debounceBanner}</p>
 
               <div className="py-5 w-full h-auto flex items-center gap-3">
                 <Link
@@ -96,14 +119,7 @@ const Hero = ({ ...props }) => {
             </aside>
 
             <aside className="h-auto  w-11/12 lg:w-1/2  m-auto ">
-              <Lottie
-                animationData={Astro}
-                loop
-                autoplay
-                ref={animationRef}
-                style={{ width: "100%", margin: "auto" }}
-                onLoad={() => {}}
-              />
+              <LottieAnimation ref={animationRef} />
             </aside>
           </div>
         </div>
