@@ -7,7 +7,6 @@ import { FiLinkedin, FiGithub, FiInstagram } from "react-icons/fi"
 import { RiTwitterXFill } from "react-icons/ri"
 import Astro from "./../../public/lottie/animation_lmtd0834.json"
 import { Parallax } from "@react-spring/parallax"
-import LottieAnimation from "./astro"
 import Lottie from "lottie-react"
 
 const Hero = () => {
@@ -18,7 +17,7 @@ const Hero = () => {
   useEffect(() => {
     const msg =
       "  Software Developer and Computer Scientist, Scroll down and learn some about me.|"
-    const speed = 50 // Adjust the typing speed (characters per second)
+    const speed = 50
 
     if (index < msg.length) {
       setTimeout(() => {
@@ -26,7 +25,6 @@ const Hero = () => {
         setIndex((prev) => prev + 1)
       }, 1000 / speed)
     } else {
-      // Remove the last character
       setTimeout(() => {
         setBannerTxt((prev) => prev.slice(0, -1))
         setIndex((prev) => prev - 1)
@@ -104,7 +102,13 @@ const Hero = () => {
           </aside>
 
           <aside className="h-auto w-11/12 lg:w-1/2 m-auto ">
-            <LottieAnimation ref={animationRef} />
+            <Lottie
+              animationData={Astro}
+              loop
+              autoplay
+              style={{ width: "75%", margin: "auto" }}
+              ref={animationRef}
+            />{" "}
           </aside>
         </div>
       </div>
