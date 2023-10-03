@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: mont;
-  src: url("./../../public/fonts/Aileron-Regular.otf");
+  font-family: jet;
+  src: url("./../../public/fonts/jet/JetBrainsMono-VariableFont_wght.ttf");
 }
 * {
-  font-family: mont;
+  font-family: jet;
 }
 :root {
   --cursor-color: white;

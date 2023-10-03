@@ -5,7 +5,7 @@ const HeroSection = ({ ...props }) => {
   return (
     <>
       <main className="w-full h-auto lg:h-[87vh]  relative flex items-center justify-center">
-        <h1 className="text-white text-xl">What's up there</h1>
+        <h1 className="text-white text-xl">What's up There!, This is </h1>
 
         <div className="absolute right-0 flex rotate-90">
           {bruh.map((letter: string, index: number) => {
