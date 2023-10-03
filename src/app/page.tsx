@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react"
-import { Hero, Skills, Header, HeroSection } from "./../components"
+import { Header, HeroSection } from "./../components"
 import bck from "./../../public/assets/bck.jpg"
 
 const Home = () => {
