@@ -1,9 +1,11 @@
 "use client"
 import * as React from "react"
-import { Header, HeroSection } from "./../components"
+import { Header, HeroSection, Description } from "./../components"
 import bck from "./../../public/assets/bck.jpg"
 
 const Home = () => {
+  //create ref
+
   return (
     <main
       onScroll={(e) => {
@@ -18,6 +20,7 @@ const Home = () => {
         <div className="w-full h-full block overflow-y-scroll">
           <Header />
           <HeroSection />
+          <Description />
         </div>
       </div>
     </main>
