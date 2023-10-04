@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react"
-import { Header, HeroSection, Description } from "./../components"
+import { Header, HeroSection, Description, SoftSkills } from "./../components"
 import bck from "./../../public/assets/bck.jpg"
 
 const Home = () => {
@@ -21,6 +21,7 @@ const Home = () => {
           <Header />
           <HeroSection />
           <Description />
+          <SoftSkills />
         </div>
       </div>
     </main>
