@@ -16,7 +16,7 @@ const Description = () => {
           />
         </aside>
         <aside className="w-full lg:w-1/2 h-full grid content-center  ">
-          <p className="text-white text-sm w-4/5 m-auto lg:m-0 ">
+          <p className="text-white text-sm w-4/5 m-auto lg:m-0 pb-5">
             Hello there! My name is Alaa Barka, and I am a Full Stack Web
             Developer and Cross Platform Developer.
             <br />
@@ -28,7 +28,7 @@ const Description = () => {
             skills to create innovative solutions.
           </p>
 
-          <button className="w-48 m-auto lg:m-0 border block m-left mt-10 border-white text-white px-6 py-3 hover:bg-white hover:text-gray-900 hover:border-transparent transition duration-300 ease-in-out text-sm font-thin">
+          <button className="w-48 m-auto  lg:m-0 border block m-left  border-white text-white px-6 py-3 hover:bg-white hover:text-gray-900 hover:border-transparent transition duration-300 ease-in-out text-sm font-thin">
             Say My name
           </button>
         </aside>
