@@ -10,7 +10,7 @@ const HeroSection = ({ ...props }) => {
       <main className="w-full  h-[87vh]  relative flex items-center justify-center overflow-x-hidden">
         <div className="flex flex-col   justify-center  w-full p-3 lg:pl-[10%] ">
           <h1 className="text-white lg:text-3xl text-xl">
-            What's up There!, This is{" "}
+            What&apos;s up There!, This is{" "}
           </h1>
           <h1 className="font-extrabold py-5 text-transparent text-8xl bg-clip-text bg-gradient-to-r from-[#009FFF] to-[#ec2F4B] flex items-center ">
             <GiTriangleTarget color="#009FFF" size={90} />
