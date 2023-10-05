@@ -4,7 +4,7 @@ const SoftSkillCard = ({ ...props }) => {
   return (
     <>
       <div
-        className="lg:w-1/3 md:w-1/2 w-10/12 h-96 rounded flex items-center justify-center flex-col gap-4"
+        className="xl:w-1/3 lg:w-1/2 w-10/12 h-96 rounded flex items-center justify-center flex-col gap-4"
         style={{
           backgroundImage:
             `linear-gradient(45deg, ${props.From}, ${props.To})` as string,

@@ -1,7 +1,8 @@
 import * as React from "react"
 import Communication from "./../../public/lottie/communication.json"
 //lottifie json imports
-
+import Stress from "./../../public/lottie/stress.json"
+import Solving from "./../../public/lottie/problemsolving.json"
 import Team from "./../../public/lottie/teamwork.json"
 import Lottie from "lottie-react"
 import softSkills from "@/constants/interfaces/softskills"
@@ -39,10 +40,10 @@ const SoftSkills = ({ ...props }) => {
       colors: ["#0093E9", "#C850C0"],
     },
     {
-      title: "Leadership",
+      title: "Time Management",
       animation: (
         <Lottie
-          animationData={Team}
+          animationData={Stress}
           ref={React.useRef(null)}
           loop
           autoplay
@@ -57,7 +58,7 @@ const SoftSkills = ({ ...props }) => {
       title: "Problem Solving",
       animation: (
         <Lottie
-          animationData={Communication}
+          animationData={Solving}
           ref={React.useRef(null)}
           loop
           autoplay
