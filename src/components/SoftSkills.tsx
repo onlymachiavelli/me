@@ -73,7 +73,9 @@ const SoftSkills = ({ ...props }) => {
   return (
     <>
       <div className="w-full h-auto lg:px-36">
-        <p className="text-white text-xl ">Learn some of my Soft-Skills</p>
+        <p className="text-white text-xl pl-10 lg:pl-0">
+          Learn some of my Soft-Skills
+        </p>
 
         <div className="w-full h-auto flex items-center justify-center gap-10 py-10 flex-wrap ">
           {mySoftSkills.map((skill: softSkills, index: number) => {

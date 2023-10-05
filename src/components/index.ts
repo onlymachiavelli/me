@@ -6,3 +6,4 @@ export { default as Description } from "./Description"
 export { default as SoftSkills } from "./SoftSkills"
 
 export { default as SoftSkillCard } from "./SoftSkillCard"
+export { default as HardSkills } from "./hardskill"
