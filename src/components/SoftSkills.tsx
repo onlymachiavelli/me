@@ -1,5 +1,8 @@
 import * as React from "react"
 import Communication from "./../../public/lottie/communication.json"
+//lottifie json imports
+
+import Team from "./../../public/lottie/teamwork.json"
 import Lottie from "lottie-react"
 import softSkills from "@/constants/interfaces/softskills"
 import { SoftSkillCard } from "./"
@@ -24,22 +27,22 @@ const SoftSkills = ({ ...props }) => {
       title: "Team Work",
       animation: (
         <Lottie
-          animationData={Communication}
+          animationData={Team}
           ref={React.useRef(null)}
           loop
           autoplay
-          className="w-1/2"
+          className="w-full"
         />
       ),
       description:
         "Clear and persuasive communication is the cornerstone of effective interactions.",
-      colors: ["#FFCC70", "#C850C0"],
+      colors: ["#0093E9", "#C850C0"],
     },
     {
       title: "Leadership",
       animation: (
         <Lottie
-          animationData={Communication}
+          animationData={Team}
           ref={React.useRef(null)}
           loop
           autoplay
@@ -48,7 +51,7 @@ const SoftSkills = ({ ...props }) => {
       ),
       description:
         "Clear and persuasive communication is the cornerstone of effective interactions.",
-      colors: ["#FFCC70", "#C850C0"],
+      colors: ["#00DBDE", "#FC00FF"],
     },
     {
       title: "Problem Solving",
@@ -63,7 +66,7 @@ const SoftSkills = ({ ...props }) => {
       ),
       description:
         "Clear and persuasive communication is the cornerstone of effective interactions.",
-      colors: ["#FFCC70", "#C850C0"],
+      colors: ["#DEAD00", "#FC00FF"],
     },
   ]
   return (
@@ -79,7 +82,9 @@ const SoftSkills = ({ ...props }) => {
                   From={skill.colors[0]}
                   To={skill.colors[1]}
                   key={index}
-                  //Animation={skill.animation}
+                  Animation={skill.animation}
+                  Title={skill.title}
+                  Description={skill.description}
                 />
               </>
             )

@@ -18,8 +18,8 @@ const HeroSection = ({ ...props }) => {
           </h1>
 
           <p className="text-white w-3/5 text-xs md:text-base">
-            My name is Alaa Barka, CS Student @ UIK. I am a Full-Stack Web
-            Developer. Scroll down to learn more about me.
+            My name is Alaa Barka, Software Engineer Student @UIK. I am a
+            Full-Stack Web Developer. Scroll down to learn more about me.
           </p>
 
           <div className="py-5 w-full h-auto flex items-center gap-3">
